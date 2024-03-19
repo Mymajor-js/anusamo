@@ -1,0 +1,332 @@
+.show-content {
+    position: relative; /* ต้องกำหนด position เป็น relative เพื่อให้การกำหนดตำแหน่งเป็นไปตามหลักแหล่งของตัวเอง */
+    padding-bottom: 20px;
+    
+  }
+ 
+  .show-co {
+    z-index: 90 ;
+    position: absolute; /* กำหนดให้ตำแหน่งเป็น absolute */
+    top: -250px; /* กำหนดให้อยู่ที่ตำแหน่งกึ่งกลางของแนวแกน y */
+    left: 50%; /* กำหนดให้อยู่ที่ตำแหน่งกึ่งกลางของแนวแกน x */
+    transform: translate(-50%, -50%); /* ใช้ transform เพื่อย้ายตำแหน่ง element ไปที่กลาง */
+    padding: 50px; /* กำหนด padding สำหรับระยะห่างของข้อความในตัว element */
+    background-color: #ffffff; /* กำหนดสีพื้นหลัง */
+    border-radius: 10px; /* กำหนดรูปร่างของมุม */
+    opacity: 0; /* เริ่มต้นให้ opacity เป็น 0 เพื่อซ่อน element */
+    animation: fadeIn 1s forwards; /* เพิ่ม animation fadeIn เพื่อทำให้ element แสดงผลด้วย opacity เป็น 1 */
+    box-shadow: 0 0 5px rgba(121, 121, 121, 0.5); /* ใส่เงาดำ */
+  }
+  .retop{
+    margin-bottom: 15px;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0; /* เริ่มต้นที่ opacity เป็น 0 */
+    }
+    to {
+      opacity: 1; /* สิ้นสุดที่ opacity เป็น 1 */
+    }
+  }
+
+  .button {
+    background-color: lightcoral;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 5em;
+    border-radius: 1rem;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0.4rem #dfd9d9;
+    cursor: pointer;
+   }
+   
+   .button:active {
+    color: lightcoral;
+    box-shadow: 0 0.2rem #dfd9d9;
+    transform: translateY(0.2rem);
+   }
+   
+   .button:hover:not(:disabled) {
+    background: white;
+    color: lightcoral;
+    text-shadow: 0 0.1rem #bcb4b4;
+   }
+   
+   .button:disabled {
+    cursor: auto;
+    color: grey;
+   }
+
+   .btns {
+    background-color: #eee;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 5em;
+    border-radius: 1rem;
+    color: lightcoral;
+    box-shadow: 0 0.4rem #dfd9d9;
+    cursor: pointer;
+   }
+   
+   .btns:active {
+    color: white;
+    box-shadow: 0 0.2rem #dfd9d9;
+    transform: translateY(0.2rem);
+   }
+   
+   .btns:hover:not(:disabled) {
+    background: lightcoral;
+    color: white;
+    text-shadow: 0 0.1rem #bcb4b4;
+   }
+   
+   .btns:disabled {
+    cursor: auto;
+    color: grey;
+   }
+
+   .buttonshow {
+    font-family: inherit;
+    font-size: 20px;
+    background: #212121;
+    color: white;
+    fill: rgb(155, 153, 153);
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    font-weight: 1000;
+  }
+  
+  .buttonshow span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .buttonshow svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .buttonshow:hover {
+    background: #000;
+  }
+  
+  .buttonshow:hover .svg-wrapper {
+    transform: scale(1.25);
+    transition: 0.5s linear;
+  }
+  
+  .buttonshow:hover svg {
+    transform: translateX(1.2em) scale(1.1);
+    fill: #fff;
+  }
+  
+  .buttonshow:hover span {
+    opacity: 0;
+    transition: 0.5s linear;
+  }
+  
+  .buttonshow:active {
+    transform: scale(0.95);
+    opacity: 0;
+    transition: 0.5s;
+  }
+
+  /* Input container */
+.input-container {
+    position: relative;
+    margin: 20px;
+  }
+  
+  /* Input field */
+  .input-field {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    background-color: transparent;
+  }
+  
+  /* Input label */
+  .input-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    color: rgba(204, 204, 204, 0);
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  
+  /* Input highlight */
+  .input-highlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #007bff;
+    transition: all 0.3s ease;
+  }
+  
+  /* Input field:focus styles */
+  .input-field:focus + .input-label {
+    top: -20px;
+    font-size: 12px;
+    color: #007bff;
+  }
+  
+  .input-field:focus + .input-label + .input-highlight {
+    width: 100%;
+  }
+
+
+.table-wrapper{
+    margin: 10px 70px 70px;
+    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+}
+
+.fl-table {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+.fl-table td, .fl-table th {
+    text-align: center;
+    padding: 8px;
+}
+
+.fl-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 12px;
+}
+
+.fl-table thead th {
+    color: #ffffff;
+    background: #4FC3A1;
+}
+
+
+.fl-table thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #324960;
+}
+
+.fl-table tr:nth-child(even) {
+    background: #F8F8F8;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+    .fl-table {
+        display: block;
+        width: 100%;
+    }
+    .table-wrapper:before{
+        content: "Scroll horizontally >";
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        color: white;
+        padding: 0 0 10px;
+    }
+    .fl-table thead, .fl-table tbody, .fl-table thead th {
+        display: block;
+    }
+    .fl-table thead th:last-child{
+        border-bottom: none;
+    }
+    .fl-table thead {
+        float: left;
+    }
+    .fl-table tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+    .fl-table td, .fl-table th {
+        padding: 20px .625em .625em .625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        font-size: 13px;
+        text-overflow: ellipsis;
+    }
+    .fl-table thead th {
+        text-align: left;
+        border-bottom: 1px solid #f7f7f9;
+    }
+    .fl-table tbody tr {
+        display: table-cell;
+    }
+    .fl-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+    .fl-table tr:nth-child(even) {
+        background: transparent;
+    }
+    .fl-table tr td:nth-child(odd) {
+        background: #F8F8F8;
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tr td:nth-child(even) {
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tbody td {
+        display: block;
+        text-align: center;
+    }
+}
+.closebtn{
+  width: 100px;
+  height: 25px;
+  background: #4FC3A1;
+  border: 0;
+  cursor: pointer;
+  border-radius: 15px;
+  color:white;
+}
+.closebtn:hover{
+  transition: 0.7s;
+  background: #324960;
+  color: #f6ff00;
+  width: 110px;
+}
+.closebtn::before{
+  transition: 0.7s;
+  width: 110px;
+  height: 35px;
+}
+.closebtn::after{
+  transition: 0.7s;
+  width: 110px;
+  height: 35px;
+}
+.closebtn:active{
+  transition: 0.7s;
+  background: #324960;
+  color: #f6ff00;
+  width: 110px;
+}
